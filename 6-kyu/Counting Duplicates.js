@@ -1,3 +1,24 @@
+//1
+function duplicateCount(text) {
+  let arr = text.toLowerCase().split("");
+
+  const counts = {};
+
+  arr.forEach(function (i) {
+    counts[i] = (counts[i] || 0) + 1;
+  });
+  let count = 0;
+
+  for (const [key,value] of Object.entries(counts)) {
+    if (value > 1) {
+      count++;
+    }
+  }
+  return count;
+}
+
+
+//2
 function duplicateCount(text) {
   return (
     text
